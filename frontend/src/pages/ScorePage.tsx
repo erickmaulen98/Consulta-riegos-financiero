@@ -41,6 +41,11 @@ async function handleSubmit(event: FormEvent) {
 
   return (
     <div>
+      <header>
+        <span>{user?.role === 'admin' ? 'Administrador' : `Usuario · ${user?.rut}`}</span>
+        <button type="button" onClick={logout}>Cerrar sesión</button>
+      </header>
+
       <form onSubmit={handleSubmit}>
         <h1>Consulta de Score Financiero</h1>
 
